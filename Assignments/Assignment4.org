@@ -1,0 +1,42 @@
+#+TITLE: Assignment No. 4
+#+OPTIONS: toc:nil date:nil author:nil
+* TITLE
+UML Diagrams
+* AIM
+To draw UML diagrams required for project.
+* OBJECTIVE
+To model he proposed systems using UML diagrams.
+* THEORY
+- What is UML?
+  UML stands for Unified Modelling Language. UML is a standard language for specifying, visualizing, constructing, and documenting the artifacts of software systems. UML is a pictorial language used to make software blueprints. UML is not a programming language but tools can be  code in various languages using UML diagrams.
+- Goals of UML:
+  The primary goals in the design of UML are :
+  1. Provide users with a ready-to-use, expressive visual modelling language so they can develop exchange meaningful models.
+  2. Provide extensibility and specialization mechanisms to extend the core concepts.
+  3. Be independent of particular programming languages and development processes.
+  4. Provide a formal basis for understanding the modelling language.
+  5. Encourage the growth of the OO tools market.
+  6. Support higher-level development concepts such as collaborations, frameworks, patterns and components.
+  7. Integrate best practices.
+- Types of UML models:
+  There are three important types of UML digrams:
+  1. Structural Modelling:
+     Structural modelling captures the static features of a system like components used , etc. \\
+     They consist of the following:
+     + Class digrams
+     + Object digrams
+     + Deployment diagrams
+     + Package diagrams
+     + Composite structure diagrams
+     + Component diagrams
+  2. Behavioural Modelling: 
+     Behavioural model describes the interaction in the system. It represents the interaction among the structural diagrams. They consist of th following:
+     + Activity diagrams
+     + Interaction diagrams
+     + Use case diagrams
+  3. Architectural Modelling:
+     Architecture model represents the overall framework of the system. It contains both structural and behaviourl elements of the system. Package diagram comes under architectural modelling.
+* TODO DIAGRAMS FOR THE PROPOSED SYSTEM
+** Use case diagram
+** Class diagram
+** State diagramo
