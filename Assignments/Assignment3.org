@@ -1,0 +1,18 @@
+#+TITLE: Assignment No. 3
+#+OPTIONS: toc:nil date:nil author:nil
+* TITLE
+Use of divide and conquer strategies to exploit distributed/parallel/concurrent processing of the problem statement to identify objects, morphisms, overloading in functions (if any) and functional relations and any other dependencies.
+* AIM
+To identify object oriented concepts for our project.
+* OBJECTIVE
+To exploit distributed/parallel/concurrent processing of the problem statement To identify objects,
+morphisms, overloading in functions (if any).
+* TODO THEORY
+1. Divide and conquer strategies to exploit distributed/parallel/concurrent processing of the problem statement :
+   In computer science, divide and conquer is an algorithm based on multi-branched recursion. We use divide and conquer strategies such as: We have divided the problem into classes and functions, and then further we merged them together to generate result. Here, we are making pre-processing, low level feature extraction, high level feature extraction, and then we finally connect all these modules to achieve the desired goal of our problem.
+2. Objects : TODO
+   Objects are entities having some identifiable attributes and methods that represent behaviour of real world entities. Objects are instances of class. In this project, we consider the following features as objects : (ADD OBJECTS HERE)
+3. Functional dependencies :  TODO
+   A function 'A' is said to be functionally dependent on function 'B' if A's input is the output of 'B'.
+   (LIST FUNCTIONS/MODULES HERE)
+   All these modules are dependent on each other and need to be followed in proper order.

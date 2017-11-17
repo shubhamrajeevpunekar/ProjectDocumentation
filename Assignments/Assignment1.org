@@ -1,0 +1,21 @@
+#+TITLE: Assignment No. 1
+#+OPTIONS: toc:nil author:nil date:nil 
+* TITLE
+Knowledge Canvas and Idea Matrix
+* AIM
+To develop the problem under consideration and justify feasibility using concepts of knowledge
+canvas and IDEA Matrix.
+* TODO PROBLEM STATEMENT 
+* TODO PROBLEM DESCRIPTION
+* Knowledge Canvas and IDEA Matrix
+Knowledge Canvas is the one that depicts the knowledge forces and knowledge flow across the organization and extended organizations. It captures the current knowledge state and knowledge forces in the environment. It tries to build bigger knowledge scenario for projects. It helps to identify the knowledge opportunities, prospective knowledge partners and knowledge losses. It is used to establish association among knowledge opportunities. \\
+Principle components for knowledge canvas include:
++ Knowledge force for cost saving
++ Knowledge about precision
++ Knowledge about precision
++ Knowledge about social reluctance
++ Automation economics
++ Precision economics
++ External knowledge forces
++ Globalization knowledge force
+* TODO IDEA Matrix

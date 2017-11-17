@@ -1,0 +1,32 @@
+#+TITLE: Assignment No. 5
+#+OPTIONS: author:nil date:nil toc:nil
+* TITLE
+Testing.
+* AIM
+Test the different modules of the project.
+* OBJECTIVE
+1. Test plan.
+2. Find test data.
+3. Find test cases.
+* TEST SPECIFICATION
+Testing is an investigation conducted to provide stakeholders with information about the quality of the product or service under test. Software testing also provides an objective, independent view of the software to allow the business to appreciate and understand the risks of software implementation. This section discussed about the testing done for the proposed system. Functional and non-functional testing is performed for the proposed system. Test all the module of the proposed system. 
+* TYPES OF TESTING METHODS
+1. Unit Testing: 
+   Unit Testing is a level of software testing where individual units/ components of a software are tested. Unit Testing is a level of software testing where individual units/ components of a software are tested. The purpose is to validate that each unit of the software performs as designed. A unit is the smallest testable part of software. It usually has one or a few inputs and usually a single output. Unit testing frameworks, drivers, stubs, and mock/ fake objects are used to assist in unit testing.
+2. Integration Testing:
+   Integration Testing is a level of software testing where individual units are combined and tested as a group. Testing performed to expose defects in the interfaces and in the interactions between integrated components or systems. Test drivers and test stubs are used to assist in Integration Testing.
+3. Functional Testing:
+   Functional Testing is a type of software testing whereby the system is tested against the functional requirement/specification functions (or features) are tested by feeding them input and examining the output. Functional testing ensures that the requirements areproperly satisfied by the application. This type of testing is not concerned with how processing occurs, but rather, with the results of processing. During functional testing, Black Box Testing technique is used in which the internal logic of the system being tested is not known to the tester. Functional testing is normally performed during the levels of System Testing.
+4. System Testing:
+   System Testing is a level of the software testing where a complete and integrated software is tested. The purpose of this test is to evaluate the system's compliance with the specified requirements. System Testing is performed after Integration Testing. 
+* TODO TEST DETAILS
+List of test cases:
+1. (TESTCASE1)
+2. (TESTCASE2)
+* TODO TEST CASES
++ Test Case 1:
+  - Test Objective :
+  - Prerequisite :
+  - Steps :
+  - Expected Result: 
+
