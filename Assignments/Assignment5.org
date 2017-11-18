@@ -55,7 +55,7 @@ List of test cases:
 + Test Case 5 :
   - Test Objective : To test if the tone analysis module generates a correct emotive score
   - Prerequisite : The tone analysis module is running
-  - Steps : Sample from the dataset if fed to the tone analysis module, the emotive score is validated against its label score
+  - Steps : Sample from the dataset is fed to the tone analysis module, the emotive score is validated against its label score
   - Expected Result : Correct emotive score, within an acceptable degree of error is predicted
 + Test Case 6 :
   - Test Objective : To test whether the speech extracted from audio is accurate
