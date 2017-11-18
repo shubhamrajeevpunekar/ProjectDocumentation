@@ -19,14 +19,66 @@ Testing is an investigation conducted to provide stakeholders with information a
    Functional Testing is a type of software testing whereby the system is tested against the functional requirement/specification functions (or features) are tested by feeding them input and examining the output. Functional testing ensures that the requirements areproperly satisfied by the application. This type of testing is not concerned with how processing occurs, but rather, with the results of processing. During functional testing, Black Box Testing technique is used in which the internal logic of the system being tested is not known to the tester. Functional testing is normally performed during the levels of System Testing.
 4. System Testing:
    System Testing is a level of the software testing where a complete and integrated software is tested. The purpose of this test is to evaluate the system's compliance with the specified requirements. System Testing is performed after Integration Testing. 
-* TODO TEST DETAILS
+* TEST DETAILS
 List of test cases:
-1. (TESTCASE1)
-2. (TESTCASE2)
-* TODO TEST CASES
+1. Test whether the input module receives a valid frame sequence and audio input
+2. Test when the input module receives an invalid frame sequence and audio input
+3. Test whether communication module sends and receives data from the robot and server
+4. Test if the identity of the subject is established
+5. Test if the tone analysis module generates a correct emotive score
+6. Test if the speech text extracted from the audio is accurate
+7. Test if the speech text analysis module generates a correct emotive score
+8. Test if the facial feature analysis module generates a correct emotive score
+9. Test if the weighted emotive state is generated correctly
+10. Test if the response is generated in near real time
+* TEST CASES
 + Test Case 1:
-  - Test Objective :
-  - Prerequisite :
-  - Steps :
-  - Expected Result: 
-
+  - Test Objective : To test whether the input module receives a valid frame sequence and audio input 
+  - Prerequisite : System is up and running
+  - Steps : Get a sample from dataset and feed it to the running system
+  - Expected Result: No error is reported
++ Test Case 2:
+  - Test Objective : To test when the input module receives an invalid frame sequence and audio input
+  - Prerequisite : System is up and running
+  - Steps : Stop any input samples
+  - Expected Result : Emotive state is extrapolated from the previous input samples
++ Test Case 3:
+  - Test Objective : To test whether the communication module sends and receives data from the robot and the server
+  - Prerequisite : The input module and the processing server is functional
+  - Steps : Use a sample from the dataset and feed it to the communication module, read data for the processed sample from the dataset
+  - Expected Result : Correct data is read back from the server, validated against it's score from the dataset
++ Test Case 4 :
+  - Test Objective : To test if the identity of the subject is established
+  - Prerequsite : The input module, communication module and the processing server is functional
+  - Steps : Use samples from the dataset, read back the data from communication module and validate it against the known identity
+  - Expected Result : Correct identity is established, else an identity object is created for the new subject
++ Test Case 5 :
+  - Test Objective : To test if the tone analysis module generates a correct emotive score
+  - Prerequisite : The tone analysis module is running
+  - Steps : Sample from the dataset is fed to the tone analysis module, the emotive score is validated against its label score
+  - Expected Result : Correct emotive score, within an acceptable degree of error is predicted
++ Test Case 6 :
+  - Test Objective : To test whether the speech extracted from audio is accurate
+  - Prerequisite : Speech to text module is running
+  - Steps : Feed a sample from audio dataset, validate the output with it's known text
+  - Expected Result : Correct text is extracted from the audio 
++ Test Case 7 : 
+  - Test Objective : To test whether speech text analysis module generates a correct emotive score
+  - Prerequisite : The speech text analysis module is running, the speech to text module gives an accurate output
+  - Steps : The output of the speech to text is fed to the speech text analysis module, the emotive score is validated against it's label score
+  - Expected Result : Correct score is calculated by the module
++ Test Case 8 : 
+  - Test Objective : To test if the facial feature analysis module generates a correct emotive score
+  - Prerequisite : Facial Feature analysis module is running
+  - Steps : Sample from dataset is tested, the output is validated against the label score
+  - Expected Result : Correct score is calculated by the module
++ Test Case 9 : 
+  - Test Objective : To test if the weighted emotive state is generated correctly
+  - Prerequisite : The tone analysis, speech analysis and facial feature analysis modules are running
+  - Steps : A weighted average of emotive scores from the analysis modules is calculated
+  - Expected Result : Correct score is calculated
++ Test Case 10 : 
+  - Test Objective : To test if the response is generated in near real time
+  - Prerequisite : System is running
+  - Steps : Test with datasample in end-to-end system
+  - Expected Result : Data is processed in near real time, response is generated within reasonable delay
