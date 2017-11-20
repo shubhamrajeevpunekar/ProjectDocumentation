@@ -5,8 +5,10 @@ Knowledge Canvas and Idea Matrix
 * AIM
 To develop the problem under consideration and justify feasibility using concepts of knowledge
 canvas and IDEA Matrix.
-* TODO PROBLEM STATEMENT 
-* TODO PROBLEM DESCRIPTION
+* PROBLEM STATEMENT 
+Improving Human Computer Interaction with Machine Emotional Intelligence using NAO robot.
+* PROBLEM DESCRIPTION
+Knowing the emotional state of an individual can be crucial in determining what action is to be taken as a response. Recognizing the affective state of a human can be difficult for humans as well as systems. Many features can be considered such as voice samples, facial cues or even text written by the person to identify the emotional state of the individual. The major focus of the project is improving human-machine interaction using the NAO robot. The robot will accept the input from the person periodically in the form of speech samples, comprising of voice and text as well as facial cues and will interpret the current emotional state of the person. Although our main focus is on humanizing the NAO robot and making it an ideal companion for old people, there are myriad of other uses that can be achieved; some of which are: development of an affect-aware city, Add security layer at public venues to detect malicious intent and deal with hostage situation effectively, measure response and ratings in focus groups (consumer response to commercials etc), wearables that help autistics discern emotion etc. 
 * Knowledge Canvas and IDEA Matrix
 Knowledge Canvas is the one that depicts the knowledge forces and knowledge flow across the organization and extended organizations. It captures the current knowledge state and knowledge forces in the environment. It tries to build bigger knowledge scenario for projects. It helps to identify the knowledge opportunities, prospective knowledge partners and knowledge losses. It is used to establish association among knowledge opportunities. \\
 Principle components for knowledge canvas include:
@@ -18,4 +20,23 @@ Principle components for knowledge canvas include:
 + Precision economics
 + External knowledge forces
 + Globalization knowledge force
-* TODO IDEA Matrix
+\newpage
+* IDEA Matrix
+#+CAPTION: IDEA Matrix
+#+NAME: tab:idea-matrix
+#+ATTR_LATEX: :align |p{3cm}|p{3cm}|p{3cm}|p{3cm}| 
+| <20>                 | <20>                 | <20>                 | <20>                 |
+|----------------------+----------------------+----------------------+----------------------|
+| I                    | D                    | E                    | A                    |
+|----------------------+----------------------+----------------------+----------------------|
+| *Increase*           | *Drive*              | *Enhance*            | *Accelerate*         |
+| Accuracy of emotion detection and recognition. | Create a system which can recognize an emotion based on facial cues and voice samples. | Images of faces and audio dataset is used and classifiers like RNN for audio, SVM for speech and CNN for facial. | Speed of emotion detection and recogntion. |
+|----------------------+----------------------+----------------------+----------------------|
+| *Improve*            | *Deliver*            | *Evaluate*           | *Associate*          |
+| The ability of the system to classify various emotions by combining facial cues with voice samples. | An emotion recognition system based on principles of image processing, audio processing and machine learning. | Images in the form of sequential frames and voice samples in the training datasets to classify emtions correctly. | The received live voice sample and frame sequence to the information stored in the system. |
+|----------------------+----------------------+----------------------+----------------------|
+| *Ignore*             | *Decrease*           | *Eliminate*          | *Avoid*              |
+| Irrelevant audio and background images in the dataset as well as the live feed. | Delay in the audio and image transmission from NAO to the remote server. | Fault in the emotion recognition as well as the delay in classification. | Errors which may arise due to manual or background interference. |
+|----------------------+----------------------+----------------------+----------------------|
+
+
