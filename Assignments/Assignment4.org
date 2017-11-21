@@ -3,9 +3,9 @@
 * TITLE
 UML Diagrams
 * AIM
-To draw UML diagrams required for project.
+  To draw UML diagrams required for project.
 * OBJECTIVE
-To model he proposed systems using UML diagrams.
+To model the proposed systems using UML diagrams.
 * THEORY
 - What is UML?
   UML stands for Unified Modelling Language. UML is a standard language for specifying, visualizing, constructing, and documenting the artifacts of software systems. UML is a pictorial language used to make software blueprints. UML is not a programming language but tools can be  code in various languages using UML diagrams.
