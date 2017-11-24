@@ -74,7 +74,7 @@ Keywords : Human Computer Interaction, Machine Emotional Intelligence, Image Pro
 13. /Jie Shen, Ognjen Rudovic, Shiyang Cheng, Maja Pantic/ -  *Sentiment Apprehension in Human-Robot Interaction with NAO* cite:shen15_sentim_nao
     In this paper, the influence of sentiment apprehension by robots (i.e., robot’s ability to reason about the user’s attitudes such as judgment / liking) on the user engagement has been studied. Two versions of mimicry game are studied: in the first, NAO was solely mimicking facial expressions of the users, while in the second he was also providing a feedback based on the sentiment apprehension. A total of 32 participants (7 female, 25 male) were recruited for this experiment, and the results show that the participants in the second group spent more time interacting with the robot and played more rounds of the mimicry game. After experiencing both versions of the game, ratings given by the participants indicate (with 99% confidence) that the game with sentiment apprehension is more engaging than the baseline version.
 14. /Dario Bertero, Pascale Fung/ -  *A First Look into Convolutional Neural Network for Speech Emotion Detection,  IEEE 2017* cite:bertero17_convol_neural_networ
-    A real-time Convolutional Neural Network model for speech emotion detection. Our model is trained from raw audio on a small dataset of TED talks speech data, manually annotated into three emotion classes: “Angry”, “Happy” and “Sad”. It achieves an average accuracy of 66.1%, 5% higher than a feature-based SVM baseline, with an evaluation time of few hundred milliseconds. An in-depth model visualization and analysis is also provided.  How the neural network effectively activates during the speech sections of the waveform regardless of the emotion, ignoring the silence parts which do not contain information has also been shown. On the frequency domain the CNN filters distribute throughout all the spectrum range, with higher concentration around the average pitch range related to that emotion. Each filter also activates at multiple frequency intervals, presumably due to the additional contribution of amplitude-related feature learning.
+    A real-time Convolutional Neural Network model for speech emotion detection. Our model is trained from raw audio on a small dataset of TED talks speech data, manually annotated into three emotion classes: “Angry”, “Happy” and “Sad”. It achieves an average accuracy of 66.1%, 5% higher than a feature-based SVM baseline, with an evaluation time of few hundred milliseconds. An in-depth model visualization and analysis is also provided.  How the neural network effectively activates during the speech sections of the waveform regardless of the emotion, ignoring the silence parts which do not contain information has also been shown. On the frequency domain the CNN filters distribute throughout all the spectrum range, with higher concentration around the average pitch range related to that emotion. Each filter also activates at multiple frequency intervals, presumably due to the additional contribution of amplitude-related feature learning.n
 15. /Gloria Zen, Elisa Ricci, Nicu Sebe/ -  *Unsupervised Domain Adaption for Personalized Facial Emotion Recognition, ACM 2014* cite:zen14_unsup_domain_adapt_person_facial_emotion_recog
     A personalization approach is proposed in which only unlabeled target-specific data are required. A new method to represent the source sample distribution based on only Support Vectors of source classifiers is proposed. Regression framework is used to learn a mapping between a marginal distribution of the data points associated to a given person and the parameters of his/her personalized classifier which is represented by a set of Support Vectors of linear classifier in the source case and by all unlabeled data points in the target case.
 
@@ -114,7 +114,7 @@ Keywords : Human Computer Interaction, Machine Emotional Intelligence, Image Pro
    #+attr_latex: :placement [H]
    #+CAPTION: High Level Design
    #+NAME: fig: high-level-design
-   [[./figures/highLevelDesign.png]]
+   [[../figures/highLevelDesign.png]]
    + Input :: Key video frames and audio segements.
    + Process :: Emotion Detection from facial cues, tone analysis, speech text, cumulative emotive state from the three phases, retrieval of a response using a heuristic method.
    + Output :: Robot response in the form of speech, postural change and limb action.
@@ -123,7 +123,7 @@ Keywords : Human Computer Interaction, Machine Emotional Intelligence, Image Pro
    #+CAPTION: Low Level Design
    #+NAME: fig: low-level-design
    #+ATTR_LATEX: :width 3.75in
-   [[./figures/lowLevelDesign.png]]
+   [[../figures/lowLevelDesign.png]]
    \newpage
 ** Tone analysis : RNN
 *** Recurrent Neural Networks
@@ -271,27 +271,27 @@ Speech recognition APIs are processed by other sentiment analysis APIs listed ab
 ** Activity Diagram
 #+CAPTION: Activity Diagram
 #+NAME: fig: activity-digram
-[[./figures/activityDiagram.png]]
+[[../figures/activityDiagram.png]]
 \newpage
 ** Class Diagram
 #+CAPTION: Class Diagram
 #+NAME: fig: class-diagram
-[[./figures/classDiagram.png]]
+[[../figures/classDiagram.png]]
 \newpage
 ** Dataflow Diagram
 #+CAPTION: Dataflow Diagram
 #+NAME: fig: dataflow-diagram
-[[./figures/dataFlowDiagram.png]]
+[[../figures/dataFlowDiagram.png]]
 \newpage
 ** State Diagram
 #+CAPTION: State Diagram
 #+NAME: fig: state-diagram
-[[./figures/stateDiagram.png]]
+[[../figures/stateDiagram.png]]
 \newpage
 ** Use Case Diagram
 #+CAPTION: Use Case Diagram
 #+NAME: use-case-diagram
-[[./figures/useCaseDiagram.png]]
+[[../figures/useCaseDiagram.png]]
 \newpage
 
 * TODO Time-line analysis of the project

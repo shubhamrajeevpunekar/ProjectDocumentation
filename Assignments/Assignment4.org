@@ -36,16 +36,19 @@ To model the proposed systems using UML diagrams.
      + Use case diagrams
   3. Architectural Modelling:
      Architecture model represents the overall framework of the system. It contains both structural and behaviourl elements of the system. Package diagram comes under architectural modelling.
+\newpage
 * DIAGRAMS FOR THE PROPOSED SYSTEM
 ** Use case diagram
 #+CAPTION: Use case diagram
 #+NAME: fig:use-case-diagram
-[[./useCaseDiagram.png]]
+[[../figures/useCaseDiagram.png]]
+\newpage
 ** Class diagram
 #+CAPTION: Class diagram
 #+NAME: fig:class-diagram
-[[./classDiagram.png]]
+[[../figures/classDiagram.png]]
+\newpage
 ** State diagram
 #+CAPTION: State diagram
 #+NAME: fig:state-digram
-[[./stateDiagram.png]]
+[[../figures/stateDiagram.png]]
