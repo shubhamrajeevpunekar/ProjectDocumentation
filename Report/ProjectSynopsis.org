@@ -109,9 +109,9 @@ Speech recognition APIs are processed by other sentiment analysis APIs listed ab
 * Project Scope
 NAO robot will automatically and periodically analyze voice samples and facial cues in order to detect the emotional state of the person interacting with the robot. Depending on the emotions the person is feeling, the NAO robot will give an appropriate response. The response will be a combination of vocal response as well as physical gesture. This humane response will make the robot an ideal companion for old people. The robot will not be able to detect every single complex emotion, but will be limited to a subset of generalized emotions.
 * High Level Design
-[[./HighLevelDesign.png]]
+[[../figures/HighLevelDesign.png]]
 * Low Level Design
-[[./LowLevelDesign.png]]
+[[../figures/LowLevelDesign.png]]
 * Hardware Requirements
 - NAO Robot : Softbank Robotics
   + Height : 58 centimeters
