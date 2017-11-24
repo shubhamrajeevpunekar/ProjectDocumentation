@@ -1,3 +1,10 @@
 *.tex
 *~ 
 \#*
+*.log
+*.bbl
+*.blg
+*.fgb_latexmk
+*.fls
+*.lof
+
