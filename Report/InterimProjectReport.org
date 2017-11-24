@@ -163,6 +163,7 @@ Stacking the activation maps for all filters along the depth dimension forms the
 - In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis. Given a set of training examples, each marked as belonging to one or the other of two categories, an SVM training algorithm builds a model that assigns new examples to one category or the other, making it a non-probabilistic binary linear classifier. An SVM model is a representation of the examples as points in space, mapped so that the examples of the separate categories are divided by a clear gap that is as wide as possible. New examples are then mapped into that same space and predicted to belong to a category based on which side of the gap they fall.
 - In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.
 - When data are not labeled, supervised learning is not possible, and an unsupervised learning approach is required, which attempts to find natural clustering of the data to groups, and then map new data to these formed groups. The clustering algorithm which provides an improvement to the support vector machines is called support vector clustering and is often[citation needed] used in industrial applications either when data are not labeled or when only some data are labeled as a preprocessing for a classification pass.
+\newpage
 * Hardware and software requirements
 ** Hardware Requirements
 - NAO Robot : Softbank Robotics
@@ -188,11 +189,24 @@ Stacking the activation maps for all filters along the depth dimension forms the
 - Python packages (NPToolKit, python networking libs, etc)
 - Continuum packages
 - Docker for dependency management
+** Datasets
+*** IEMOCAP - Interactive Emotional Dyadic Motion Capture database
+The Interactive Emotional Dyadic Motion Capture (IEMOCAP) database is an acted, multimodal and multispeaker database, recently collected at SAIL lab at USC. It contains approximately 12 hours of audiovisual data, including video, speech, motion capture of face, text transcriptions. It consists of dyadic sessions where actors perform improvisations or scripted scenarios, specifically selected to elicit emotional expressions. IEMOCAP database is annotated by multiple annotators into categorical labels, such as anger, happiness, sadness, neutrality, as well as dimensional labels such as valence, activation and dominance. The detailed motion capture information, the interactive setting to elicit authentic emotions, and the size of the database make this corpus a valuable addition to the existing databases in the community for the study and modeling of multimodal and expressive human communication.
+*** JAFFE - The Japanese Female Facial Expression database
+The database contains 213 images of 7 facial expressions (6 basic facial expressions + 1 neutral) posed by 10 Japanese female models. Each image has been rated on 6 emotion adjectives by 60 Japanese subjects. The database was planned and assembled by Michael Lyons, Miyuki Kamachi, and Jiro Gyoba. We thank Reiko Kubota for her help as a research assistant. The photos were taken at the Psychology Department in Kyushu University.
 \newpage
 
-* TODO Feasibility study
+* Feasibility study
 ** Hardware feasibility
+   - NAO robot availabile for 2-3 hours atleast thrice a week.
+   - External servers to carry out the processing of input and provide outpu.
+   - Audio and video sensors available in the NAO robot itself.
+   - Any computer with a GPU can be used to train the machine learning models.
 ** Software feasibility
+   - "Choreographe" software and key already available in order to interface with the NAO robot.
+   - Machine learning libraries necessary for the project are opensource.
+   - Algorithms required for the project have free to use licenses.
+   - The datasets used to train the CNN, RNN and SVM are freely available for reference and download
 ** Study of existing projects : 
 *** Emotion Recognition with facial detection
 Emotive analytics : blend of psychology and technology. Although reductive, emotions clubbed into 7 main categories : Joy, Sadness, Anger, Fear, Surprise, Contempt, Disgust. For facial emotion detection, algorithms detect faces within photo or video, sense micro-expressions by analyzing the relationship between points on the face, based on curated databases compiled in aacdemic environments.
