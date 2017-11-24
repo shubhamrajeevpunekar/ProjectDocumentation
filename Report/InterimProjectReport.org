@@ -38,38 +38,75 @@ Keywords : Human Computer Interaction, Machine Emotional Intelligence, Image Pro
 
 
 * Problem Statement
-Improve Human Computer Interaction with Machine Emotional Intelligence using Nao Robot, to recognize subjects based on their facial features and voice, analysis the facial features, speech text and the tone of speech to detect emotions with a weighted emotive score from former analyses and generate a context appropriate response on the robot.
+  *Improve Human Computer Interaction with Machine Emotional Intelligence using Nao Robot*
+  + to recognize subjects based on their facial features and voice,
+  + to analyse the facial features, speech text and the tone of speech to detect emotions,
+  + to generate and emotive score based on a weighted scores from former analyses,
+  + to generate a context appropriate response on the robot.
 \newpage
 
 * Project literature survey
 
-1. /Jeong-Sik Park,  Gil-Jin Jang/ ”Implementation of Voice emotion Recognition for Interaction with Mobile Agent , ACM 2014”cite:park15_implem_voice_emotion_recog_inter
+1. /Jeong-Sik Park,  Gil-Jin Jang/ - *Implementation of Voice emotion Recognition for Interaction with Mobile Agent , ACM 2014* cite:park15_implem_voice_emotion_recog_inter
    The paper proposes a simple smartphone interface framework which consists of detection of human voice, extraction of emotional features and identification of an emotional state. Energy based approach for detection of human voice is selected in which if continues estimates of spectral energy of consecutive frames exceeds a pre-determined threshold, the region is regarded as starting point of voice signal. The pitch, log-energy, and “Mel-Frequency Cepstral Coefficient (MFCC)” are selected for extraction of emotional features which make a feature vector sequence. Acoustic features vectors extracted are analyzed and compared with patterns for each emotion type. Guassian Mixture Model is the classification algorithm used. This approach achieved 70.1% correctness within 1s response time. The future work suggested is applying proposed concepts for human-machine interaction in personal agent applications.
-2. /Yu Gu, Eric Postma, Hai-Xing Lin/ ”Vocal Emotion Recognition using Log-Gabor Filters , ACM 2015”cite:gu15_vocal_emotion_recog_log_gabor_filter
+2. /Yu Gu, Eric Postma, Hai-Xing Lin/ - *Vocal Emotion Recognition using Log-Gabor Filters , ACM 2015* cite:gu15_vocal_emotion_recog_log_gabor_filter
    The propsed work utilizes 2d Gabor filters in order to decompose the associated spectogram in order to perform a spectro-temporal analysis of affective vocalizations. Instead of including all potentially relevant features which leads of dimensionality problem and subsequent degradation of performance, the work uses “feature learning” in which relevant features are automatically obtained from raw speech signals. However this leads to considerable computational resouces. Hence, no. of features is kept to minimum. By performing analysis on local specto-temporal structure, the spectrogram is treated as an image and standard image processing is implemented. Comparative evaluation of MFCC and LPCC features, untuned and tuned Gabor filters and all above combinations is done. SVM is used as a classifier. The confusion matrix for performance using tuned Gabor Filters provide a maximum of 91.6% accuracy whereas a combination of acoustic features and Gabor filter provides 93.5% accuracy.
-3. /Gloria Zen, Elisa Ricci, Nicu Sebe/  “Unsupervised Domain Adaption for Personalized Facial Emotion Recognition, ACM 2014”cite:zen14_unsup_domain_adapt_person_facial_emotion_recog
+3. /Gloria Zen, Elisa Ricci, Nicu Sebe/ - *Unsupervised Domain Adaption for Personalized Facial Emotion Recognition, ACM 2014* cite:zen14_unsup_domain_adapt_person_facial_emotion_recog
    A personalization approach is proposed in which only unlabeled target-specific data are required. A new method to represent the source sample distribution based on only Support Vectors of source classifiers is proposed. Regression framework is used to learn a mapping between a marginal distribution of the data points associated to a given person and the parameters of his/her personalized classifier which is represented by a set of Support Vectors of linear classifier in the source case and by all unlabeled data points in the target case.
-4. /Ahmed Mustafa Mahmoud,  Wan Haslina Hassan/ ”Determinism in Speech Pitch Relation to Emotions, ICIS 2009”cite:mahmoud09_deter
+4. /Ahmed Mustafa Mahmoud,  Wan Haslina Hassan/ - *Determinism in Speech Pitch Relation to Emotions, ICIS 2009* cite:mahmoud09_deter
    A deterministic rule-based text-to-speech emotional synthesis approach is proposed to generate emotional speech using semitonic interval-driven rules. Emotional speech samples are analyzed and intervals are extracted using praat tool. Objective evaluation compares sysnthesized voice to natural voice and calculates difference as an error function by considering mean square error as a measure of similarity. New emotional states may be defined using same proposed approach. Algorithms that integrate two or more emotional states may be combined to generate a variety of complex emotions.
-5. /Nancy Semwal,  Abhijeet Kumar, Sakthivel Narayanan/_autom  “Automatic Speech Emotion Detection using Multi-Domain Acoustic Feature Selection and Classification,  IEEE 2015”cite:semwal17_autom
+5. /Nancy Semwal,  Abhijeet Kumar, Sakthivel Narayanan/ -  *Automatic Speech Emotion Detection using Multi-Domain Acoustic Feature Selection and Classification,  IEEE 2015* cite:semwal17_autom
    The proposed approach concentrated on determining emotions from speech signals. Various acoustic features such as energy, zero-crossing rate(ZCR), fundamental frequency, Mel Frequency Cepstral Coefficient are extractedfor short term, overlapping frames derived from the input signal. A feature vector for every utterance is then constructed by analyzing mean, median, etc. over all frames. Sequential Backward Selection is used with K-fold cross validation to select a subset of useful features. Detection of emotions is done by classifying respective features from the full candidate feature vectors into classes, using either a pre-trained SVM or a Linear Discriminant Analysis classifier. Accuracy of 80% was obtained when tested on EmoDB dataset.
-6. /Lei Pang,  Chong-Wah Ngo/  “Multimodal Learning with Deep Boltzmann Machine for Emotion Prediction,  ACM 2015”cite:pang15_mutlim_learn_deep_boltz_machin
+6. /Lei Pang,  Chong-Wah Ngo/ - *Multimodal Learning with Deep Boltzmann Machine for Emotion Prediction,  ACM 2015* cite:pang15_mutlim_learn_deep_boltz_machin
    In contrast to existing works which concentrate on either Audio, text or video, a joint density model is proposed over the space of multi-modal inputswith Deep Boltzmann Machine. The model is trained directly on user-generated Web videos without any labelling effort. Multiple layers of hidden units and multiple modalities make learning difficult, hence learning is split into 2 stages. First, each RBM component is pre trained using greedy layerwise strategy. Then, learnt parameters are used to initialize the parameters of all layers in DBM and then the multimodal DBM is trained to finetune different modalities in a unified way. A major factor is that the deep architecture enlightens the possibility of discovering highly non-linear relationships between low-level features across different modalities. A performance improvement of 7.7% in classification accuracy is observed.
-7. /Benjamin Guthier,  Rajwa Alharthi,  Rana Abaalkhail,  Abdulmotaleb El Saddik/ “Detection and Visualization of Emotions in an Affect-Aware City,  ACM”cite:guthier14_detec_visual_emotion_affec_aware_city
+7. /Benjamin Guthier,  Rajwa Alharthi,  Rana Abaalkhail,  Abdulmotaleb El Saddik/ *Detection and Visualization of Emotions in an Affect-Aware City,  ACM* cite:guthier14_detec_visual_emotion_affec_aware_city
    In the proposed work, emotions are represented as four-dimensional vectors of pleasantness, arousal, dominance and unpredictability. In the training phase, emotion word hashtags in the messages are used as the ground-truth emotion contained in a message. A neural network is trained by using the presence of words, hashtags and emoticons in the message as features. During the live phase, these features are extracted from geo-tagged Twitter messages and given as input to neural-network. The detected emotions are aggregated over space and time and visualized on a map of the city.
+8. /Huaizu Jiang, Erik Learned-Miller/ -  *Face Detection with Faster R-CNN* cite:jiang17_face_detec_faster_r_cnn
+   Most approaches to face detection are still based on the R-CNN framework , leading to limited accuracy and processing speed. In this paper, investigations regarding the application of Faster R- CNN  which has demonstrated impressive results on various object detection benchmarks, to face detection have been made. By training a Faster R-CNN model on the large scale WIDER face dataset, state-of-the-art results on the WIDER test set as well as two other widely used face detection benchmarks, FDDB and the recently released IJB-A have been presented.
+9. /Wei Jang, Wei Wang/ -  *Face Detection and Recognition for Home Service Robots wth End-To-End Deep Neural Networks, IEEE 2017* cite:jiang17_face
+   This paper proposes an effective end-to-end face detection and recognition framework based on deep convolutional neural networks for home service robots. State-of-the-art region proposal based deep detection network has been combined with he deep face embedding network into an end-to-end system, so that the detection and recognition networks can share the same deep convolutional layers, enabling significant reduction of computation through sharing convolutional features. The detection network is robust to large occlusion, and scale, pose, and lighting variations. The recognition network does  not require explicit face alignment, which enables an effective training strategy to generate a unified network. A practical robot system is also developed based on the proposed framework, where the system automatically asks for a minimum level of human supervision when needed, and no complicated region-level face annotation is required. Experiments are conducted over WIDER and LFW benchmarks, as well as a personalized dataset collected from an office setting, which demonstrate state-of-the-art performance of the system.
+10. /Rajesh K M, Naveenkumar M/ -  *A Robust Method for face Recognition and Face Emotion Detection System using Support Vector Machines,  IEEE 2016* cite:rajesh16
+    This paper presents framework for real time face recognition and face emotion detection system based on facial features and their actions. The key elements of Face are considered for prediction of face emotions and the user. The variations in each facial feature are used to determine the different emotions of face. Machine learning algorithms are used for recognition and classification of different classes of face emotions by training of different set of images. In this context, by implementing herein algorithms would contribute in several areas of identification, psychological researches and many real world problems. The proposed algorithm is implemented using open source computer vision (OpenCV) and Machine learning with python.
+11. /Yu Gu, Eric Postma, Hai-Xing Lin/ -  *Vocal Emotion using Log-Gabor Filters, ACM 2015* cite:gu15_vocal_emotion_recog_log_gabor_filter
+    The propsed work utilizes 2d Gabor filters in order to decompose the associated spectogram in order to perform a spectro-temporal analysis of affective vocalizations. Instead of including all potentially relevant features which leads of dimensionality problem and subsequent degradation of performance, the work uses “feature learning” in which relevant features are automatically obtained from raw speech signals. However this leads to considerable computational resouces. Hence, no. of features is kept to minimum. By performing analysis on local specto-temporal structure, the spectrogram is treated as an image and standard image processing is implemented. Comparative evaluation of MFCC and LPCC features, untuned and tuned Gabor filters and all above combinations is done. SVM is used as a classifier. The confusion matrix for performance using tuned Gabor Filters provide a maximum of 91.6% accuracy whereas a combination of acoustic features and Gabor filter provides 93.5% accuracy.
+12. /Lei Pang, Chong-Wah Ngo/ -  *Multimodal Learning with Depp Boltzmann Machine for Emotion Prediction, ACM 2015* cite:pang15_mutlim_learn_deep_boltz_machin
+    In contrast to existing works which concentrate on either Audio, text or video, a joint density model is proposed over the space of multi-modal inputswith Deep Boltzmann Machine. The model is trained directly on user-generated Web videos without any labelling effort. Multiple layers of hidden units and multiple modalities make learning difficult, hence learning is split into 2 stages. First, each RBM component is pre trained using greedy layerwise strategy. Then, learnt parameters are used to initialize the parameters of all layers in DBM and then the multimodal DBM is trained to finetune different modalities in a unified way. A major factor is that the deep architecture enlightens the possibility of discovering highly non-linear relationships between low-level features across different modalities. A performance improvement of 7.7% in classification accuracy is observed.
+13. /Jie Shen, Ognjen Rudovic, Shiyang Cheng, Maja Pantic/ -  *Sentiment Apprehension in Human-Robot Interaction with NAO* cite:shen15_sentim_nao
+    In this paper, the influence of sentiment apprehension by robots (i.e., robot’s ability to reason about the user’s attitudes such as judgment / liking) on the user engagement has been studied. Two versions of mimicry game are studied: in the first, NAO was solely mimicking facial expressions of the users, while in the second he was also providing a feedback based on the sentiment apprehension. A total of 32 participants (7 female, 25 male) were recruited for this experiment, and the results show that the participants in the second group spent more time interacting with the robot and played more rounds of the mimicry game. After experiencing both versions of the game, ratings given by the participants indicate (with 99% confidence) that the game with sentiment apprehension is more engaging than the baseline version.
+14. /Dario Bertero, Pascale Fung/ -  *A First Look into Convolutional Neural Network for Speech Emotion Detection,  IEEE 2017* cite:bertero17_convol_neural_networ
+    A real-time Convolutional Neural Network model for speech emotion detection. Our model is trained from raw audio on a small dataset of TED talks speech data, manually annotated into three emotion classes: “Angry”, “Happy” and “Sad”. It achieves an average accuracy of 66.1%, 5% higher than a feature-based SVM baseline, with an evaluation time of few hundred milliseconds. An in-depth model visualization and analysis is also provided.  How the neural network effectively activates during the speech sections of the waveform regardless of the emotion, ignoring the silence parts which do not contain information has also been shown. On the frequency domain the CNN filters distribute throughout all the spectrum range, with higher concentration around the average pitch range related to that emotion. Each filter also activates at multiple frequency intervals, presumably due to the additional contribution of amplitude-related feature learning.
+15. /Gloria Zen, Elisa Ricci, Nicu Sebe/ -  *Unsupervised Domain Adaption for Personalized Facial Emotion Recognition, ACM 2014* cite:zen14_unsup_domain_adapt_person_facial_emotion_recog
+    A personalization approach is proposed in which only unlabeled target-specific data are required. A new method to represent the source sample distribution based on only Support Vectors of source classifiers is proposed. Regression framework is used to learn a mapping between a marginal distribution of the data points associated to a given person and the parameters of his/her personalized classifier which is represented by a set of Support Vectors of linear classifier in the source case and by all unlabeled data points in the target case.
 
 \newpage
 *Literature Gap*
-In general literature available today, numerous features have been developed, however the performance of classifiers is still limited, which is because of the fact that emotional states cannot be accurately distinguished by a well-defined set of discriminating features. Also, majority of work done  towards emotion detection is focused on a single mode i.e. audio/ text/ video. There is limited practical work done with multimodal inputs.
+- Emotional states are not clearly defined with boundaries :: In general literature available today, numerous features have been developed, however the performance of classifiers is still limited, which is because of the fact that emotional states cannot be accurately distinguished by a well-defined set of discriminating features.
+- Research on tone analysis :: Also, majority of work done  towards emotion detection is focused on a single mode i.e. audio/ text/ video. There is limited practical work done with multimodal inputs.
+- Response generation systems :: Response Generation Systems are mostly retrieval based, rather than a completely generative model.
 \newpage
 
 * Problem Definition
-Knowing the emotional state of an individual can be crucial in determining what action is to  be taken as a response. Recognizing the affective state of a human can be difficult for humans as well as computer systems. Many features can be considered such as voice samples, facial cues or even text written by the person to identify the emotional state of the individual. \\
-The major focus of the project is improving human-machine interaction using the NAO robot. The robot will accept the input from the person periodically in the form of speech samples, comprising of voice and text as well as facial cues and will interpret the current emotional state of the person. Although our main focus is on humanizing the NAO robot and making it an ideal companion for old people, there are myriad of other uses that can be achieved; some of which are: development of an affect-aware city, Add security layer at public venues to detect malicious intent and deal with hostage situation effectively, measure response and ratings in focus groups (consumer response to commercials etc), wearables that help autistics discern emotion etc.
+- Knowing the emotional state of an individual can be crucial in determining what action is to  be taken as a response.
+- Recognizing the affective state of a human can be difficult for humans as well as computer systems. Many features can be considered such as voice samples, facial cues or even text written by the person to identify the emotional state of the individual. 
+- The major focus of the project is improving human-machine interaction using the NAO robot.
+- The robot will accept the input from the person periodically in the form of speech samples, comprising of voice and text as well as facial cues and will interpret the current emotional state of the person.
+- Although our main focus is on humanizing the NAO robot and making it an ideal companion for old people, there are myriad of other uses that can be achieved; some of which are:
+  - Development of an affect-aware city
+  - Add security layer at public venues to detect malicious intent and deal with hostage situation effectively
+  - Measure response and ratings in focus groups (consumer response to commercials etc)
+  - Wearables that help autistics discern emotion etc.
 \newpage
 
 * Scope of the problem 
-NAO robot will automatically and periodically analyze voice samples and facial cues in order to detect the emotional state of the person interacting with the robot. Depending on the emotions the person is feeling, the NAO robot will give an appropriate response. The response will be a combination of vocal response as well as physical gesture. This humane response will make the robot an ideal companion for old people. The robot will not be able to detect every single complex emotion, but will be limited to a subset of generalized emotions.
+ - NAO robot will automatically and periodically analyze voice samples and facial cues in order to detect the emotional state of the person interacting with the robot.
+ - Specified number of frames per second will be analysed for facial cues.
+ - Audio segments will be analysed via tone for emotion detection.
+ - Speech text extracted from the audio segments will be aggregated and analysed for emotion.
+ - The robot will not be able to detect every single complex emotion, but will be limited to a subset of generalized emotions.
+ - Depending on the emotions and the context of the conversation, the NAO robot will give an appropriate response.
+ - The response will be a combination of vocal response as well as physical gesture.
+ - Vocal response generation will be retrieval based. The physical gesture will be calculated from an inbuilt library.
+ - This humane response will make the robot an ideal companion for old people.
 \newpage
 
 * System architecture
@@ -78,6 +115,9 @@ NAO robot will automatically and periodically analyze voice samples and facial c
    #+CAPTION: High Level Design
    #+NAME: fig: high-level-design
    [[./figures/highLevelDesign.png]]
+   + Input :: Key video frames and audio segements.
+   + Process :: Emotion Detection from facial cues, tone analysis, speech text, cumulative emotive state from the three phases, retrieval of a response using a heuristic method.
+   + Output :: Robot response in the form of speech, postural change and limb action.
    \newpage
 ** Low Level Design 
    #+CAPTION: Low Level Design
@@ -110,6 +150,7 @@ NAO robot will automatically and periodically analyze voice samples and facial c
 ** Software Requirements
 - Python packages (NPToolKit, python networking libs, etc)
 - Continuum packages
+- Docker for dependency management
 \newpage
 
 * TODO Feasibility study
@@ -174,7 +215,6 @@ Speech recognition APIs are processed by other sentiment analysis APIs listed ab
 - Vokaturi ::
   Open Vokaturi SDK computes percent likelihoods for 5 emotive states : neutrality, happiness, sadness, anger and fear. (API has code samples for C and python)
 \newpage
-
 
 * TODO Design (UML Diagrams)
 \newpage
