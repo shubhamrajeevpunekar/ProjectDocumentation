@@ -16,15 +16,100 @@ Informally an algorithm is any well-defined computational procedure that takes s
 ** P: 
 If the running time is some polynomial function of the size of input, for instance if the algorithm runs in linear time or quadratic time or cubic time, then we say that algorithm runs in polynomial time and the problem solves in class P.
 ** NP: 
-Now, there are lot of programs that don't run in polynomial time on regular computer, but do run in polynomial time on nondeterministic Turing machine. These programs solve the problems in NP, which stands for nondeterministic polynomial time. A nondeterministic Turing machine can do everything a regular computer can do and more. This means there is not necessarily a polynomial time way to find a solution, but once you have a solution it takes only polynomial time to verify that it is correct.
+There are a lot of programs that don't run in polynomial time on regular computer, but do run in polynomial time on nondeterministic Turing machine. These programs solve the problems in NP, which stands for nondeterministic polynomial time. NP problems are solvable in nondeterministic polynomial time, but verifiable in deterministic polynomial time.
 ** NP-complete:
-NP is a complexity class which represents the set of all problems X for which it is possible to reduce any other NP problem Y to X in polynomial time. Intuitively this means that we can solve Y quickly if we know how to solve X quickly. Precisely, Y is reducible to X, if there is a polynomial time algorithm f to transform instances y of Y to instances x = f(y) of Xin polynomial time, with the property that the answer to y is yes, if and only if the answer to f(y) is yes.
+NP is a complexity class which represents the set of all problems X for which it is possible to reduce any other NP problem Y to X in polynomial time. Intuitively this means that we can solve Y quickly if we know how to solve X quickly. Precisely, Y is reducible to X, if there is a polynomial time algorithm f to transform instances y of Y to instances x = f(y) of Xin polynomial time, with the property that the answer to y is yes, if and only if the answer to f(y) is yes. \\
+NP-complete problems are atleast as hard as all the other NP problems. \\
+Levin-Cook's theorem gives that CNF-satisfiability problem is NP complete.
 ** NP-hard:
-Intuitively, these are the problems that are even harder than the NP-complete problems. Note that NP-hard problems do not have to be in NP, and they do not have to be decision problems. The precise definition here is that a problem X is NP-hard, if there is an NP-complete problem Y, such that Y is reducible to X in polynomial time. But since any NP-complete problem can be reduced to any other NP-complete problem in polynomial time, all NP-complete problems can be reduced to any NP-hard problem in polynomial time. Then, if there is a solution to one NP-hard problem in polynomial time, there is a solution to all NP problems in polynomial time.
-* TODO ALGORITHM TYPE
-* TODO FEASIBILITY STUDY
+These problems are the problems that are even harder than the NP-complete problems. NP-hard problems do not have to be in NP, and they do not have to be decision problems. The precise definition here is that a problem X is NP-hard, if there is an NP-complete problem Y, such that Y is reducible to X in polynomial time. But since any NP-complete problem can be reduced to any other NP-complete problem in polynomial time, all NP-complete problems can be reduced to any NP-hard problem in polynomial time. Then, if there is a solution to one NP-hard problem in polynomial time, there is a solution to all NP problems in polynomial time.
+* MATHEMATICAL MODEL
+** Tone analysis
+#+CAPTION: Tone analysis : Mathematical Model - Deep Neural Network(DNN) + Extreme Learning Machine(ELM)
+#+NAME: tone-analysis-DNN-ELM
+[[../figures/toneAnalysisDNN+ELM.png]]
++ Input to DNN 
+  - Frames composed into segments according a sliding window, certain top percentage of segments qualify as input with respect to their energy. 
+  - MFCC featues, pitch based features are extracted per frame to give feature vector per frame z(m) 
+  - 2m+1 frames are stacked to generate a segment level feature vector x(m) 
+    \begin{equation}
+    x(m) = [ z(m-w),..,z(m),..,z(m+w) ]
+    \end{equation}
++ Output of DNN
+  + A sequence of probability distribution t over all emotion states for each segment
+    \begin{equation}
+    t = [P(E_{1}),....,P(E_{K})]^T
+    \end{equation}
++ Input to ELM (Utterance level feature extraction) \\
+  Statistical features per each probability distribution. \\
+  f_1, f_2, f_3 which correspond to maximal, minimal and mean of segment-level probabilityof k_{th} level emotion over utterance. f_4 is percentage of the segments which have high probability of emotion /k/.
++ Output of ELM(Utterance level classifier) \\
+  /K/-dimensional vector corresponding to scores of each emotion state. (/k/ emotions considered).
++ Objective function for DNN \\
+  Gradient descent - mini-batch
++ Objective function for DNN \\
+  Cross entropy                 
+  
+** Speech analysis
+#+CAPTION: Speech analysis : Mathematical Model - Multinomial Naive Bayesian Classifier
+#+NAME: speech-analysis-multiNB
+[[../figures/speechAnalysisMultiNB.png]]
++ Training stage
+  + Input \\
+    Dataset split into training set and testing(validation) set with /k/-fold cross-validation for assessing accuracy.
+  + Output \\
+    Trained classifier with Likelihood
+  + Likelihood(evidence) calculation \\
+    Conditional probabilities of attributes for class labels are calculated from the dataset, termed as evidence Z.
+    \begin{equation}
+    Z= p(x) = \sum_{k}p(C_k)p(x|C_k)
+    \end{equation}
++ Classification stage \\
+  This stage uses the likelihood or evidence calculated in training to classify a novel input.
+  \begin{equation}
+  P(c|d) \propto P(c) \prod_{1 \leq k \leq n_d} P(t_k|c)
+  \end{equation}
+** Facial feature analysis
+#+CAPTION: Facial feature analysis : Mathematical Model - Convolutional Neural Network(CNN)
+#+NAME: facial-feature-analysis-CNN
+[[../figures/facialFeatureAnalysisCNN.png]]
++ Input \\
+  Image (frame) from the video
++ Output \\
+  Prediction based on the output softmax layer
++ Process
+  + Image processing is narrowed to the regions of the image containing faces, by performing facial recognition in the image using a classifier (Haars cascades).
+  + Convolutional Layer \\
+    It computes the output of neurons that are connected to local regions in the input, each computing a dot product between their weights and a small region they are connected to in the input volume.
+  + ReLU layer \\
+    It applies element-wise activation function which is rectifier function = /max(0,x)/ thresholding at zero.
+  + Pool layer \\
+    It performs downsampling operation along spatial dimensions. 
+  + Fully-Connected (FC) layer \\
+    It computes the class scores among the final categories. Each neuron in this layer is connected to all the numbers in the previous one.
+  + Dropout randomly ignores nodes to prevent interdependencies emerging between nodes. 
+** Response generation
+#+CAPTION: Response generation : Mathematical Model - Neural Responding Machine(NRM)
+#+NAME: response-generation-NRM
+[[../figures/responseNRM.png]]
++ Basic idea of NRM is to build a hidden representation of a statement, then generate a response based on it.
++ Encoder converts input sequence /(x_1,...,x_T)/ into a set of high-dimensional hidden representations h = /(h_1,...,h_T)/
++ h and attention signal (previous decoded response) \alpha_t are fed into context generator to build context input to decoder /c_t/.
++ /c_t/ is linearly transformed by matrix L (as a part of the decoder) into a stimulus of generating RNN to produce the /t/-th word of a response /y_t/.
+* ALGORITHM TYPE
++ Backpropogation is a statistical method for function approximation using multilayer neural networks. Back propogation is performed with gradient descent function.
++ Backpropogation algorithm has the disadvantage that it becomes very slow in flat regions of error function. In that case the algorithm should use a larger iteration step. However, this is precluded by the length of the gradient, which is too small in these problematic regions. Gradient descent can be slowed arbitrarily in these cases.
++ It is proved that finding the appropriate weights for a learning problem consisting of just one input-output pair is computationally hard, by mapping it to an 3SAT NP complete problem. (Hilbert's problem and Kolmogorov's theorem)
++ Thus, backpropogation algorithm is NP complete, no polynomial time algorithm is known.
+
+* FEASIBILITY STUDY
 ** Technical Feasibility
++ Required hardware resources for training classifiers are available.
++ Licensed softwares and libraries are available.
 ** Economic Feasibility
++ Datasets and libraries used are provided under licenses which allow free use for non-commercial purposes. 
 ** Time Feasibility
++ The training of deep neural networks largely constitues the time requirements for the projects involving deep learning.
 ** Privacy Feasibility
-* TODO MATHEMATICAL MODEL
++ Datasets and libraries are provided with licenses which allow use for non-commercial purposes.
++ GNU GPL license, MIT license and Apache license allow use of datasets and libraries for non-commercial purposes. GNU GPL allows free use and  distribution of software under its license, as long as it's derivatives follow the same licensing model.
