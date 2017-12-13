@@ -8,11 +8,21 @@ canvas and IDEA Matrix.
 * PROBLEM STATEMENT 
 Improving Human Computer Interaction with Machine Emotional Intelligence using NAO robot.
 * PROBLEM DESCRIPTION
-Knowing the emotional state of an individual can be crucial in determining what action is to be taken as a response. Recognizing the affective state of a human can be difficult for humans as well as systems. Many features can be considered such as voice samples, facial cues or even text written by the person to identify the emotional state of the individual. The major focus of the project is improving human-machine interaction using the NAO robot. The robot will accept the input from the person periodically in the form of speech samples, comprising of voice and text as well as facial cues and will interpret the current emotional state of the person. Although our main focus is on humanizing the NAO robot and making it an ideal companion for old people, there are myriad of other uses that can be achieved; some of which are: 
-1. Development of an affect-aware city, 
-2. Add security layer at public venues to detect malicious intent and deal with hostage situation effectively, 
-3. Measure response and ratings in focus groups (consumer response to commercials etc), 
-4. Wearables that help autistics discern emotion etc. 
++ Knowing the emotional state of an individual can be crucial in determining what action is to be taken as a response. Recognizing the affective state of a human can be difficult for humans as well as systems. Many features can be considered such as voice samples, facial cues or even text written by the person to identify the emotional state of the individual. The major focus of the project is improving human-machine interaction using the NAO robot. The robot will accept the input from the person periodically in the form of speech samples, comprising of voice and text as well as facial cues and will interpret the current emotional state of the person. Although our main focus is on humanizing the NAO robot and making it an ideal companion for old people, there are myriad of other uses that can be achieved; some of which are: 
+  1. Development of an affect-aware city, 
+  2. Add security layer at public venues to detect malicious intent and deal with hostage situation effectively, 
+  3. Measure response and ratings in focus groups (consumer response to commercials etc), 
+  4. Wearables that help autistics discern emotion etc.
++ Scope of the problems
+ - NAO robot will automatically and periodically analyze voice samples and facial cues in order to detect the emotional state of the person interacting with the robot.
+ - Specified number of frames per second will be analysed for facial cues.
+ - Audio segments will be analysed via tone for emotion detection.
+ - Speech text extracted from the audio segments will be aggregated and analysed for emotion.
+ - The robot will not be able to detect every single complex emotion, but will be limited to a subset of generalized emotions.
+ - Depending on the emotions and the context of the conversation, the NAO robot will give an appropriate response.
+ - The response will be a combination of vocal response as well as physical gesture.
+ - Vocal response generation will be retrieval based. The physical gesture will be calculated from an inbuilt library.
+ - This humane response will make the robot an ideal companion for old people.
 * Knowledge Canvas and IDEA Matrix
 Knowledge Canvas is the one that depicts the knowledge forces and knowledge flow across the organization and extended organizations. It captures the current knowledge state and knowledge forces in the environment. It tries to build bigger knowledge scenario for projects. It helps to identify the knowledge opportunities, prospective knowledge partners and knowledge losses. It is used to establish association among knowledge opportunities. \\
 Principle components for knowledge canvas include:
