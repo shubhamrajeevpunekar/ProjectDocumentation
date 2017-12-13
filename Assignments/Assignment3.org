@@ -30,3 +30,17 @@ morphisms, overloading in functions (if any).
    - Emotion analysis from speech text
    - Retrievel based response system
    All these modules are dependent on each other and need to be followed in proper order.
+* PARALLELISM IN THE PROJECT
+#+CAPTION: Parallel modules in the project
+#+NAME: parallel-modules
+[[../figures/parallelModules.png]]
+1. A heirarchy of flow of control among the modules is show in the figure- ref:parallel-modules .
+2. Modules at the same level in the heirarachy are functionally independent.
+3. Data dependencies, if they emerge among the modules can be handled by mutually exclusive access or by increasing redundancy of data, making the replicated data private to each thread.
+4. Mututally exclusive access can be enforced with thread safe functions or by implementing monitors.
+5. Increasing redundancy of data can result in inconsistent states, if the data is mutable. Redundancy is to be implemented only for immutable data, that is only to be read, such as audio and video frames.
+6. Modules at the next level of heirarchy are blocked until all the modules at the current level have finished execution.
+7. Thus modules are functionally dependent at consecutive levels.
+8. Feature extraction is common to identity recognition and emotion recognition tasks. For voice, handcrafted features which are extracted such are pitch characteristics, Harmonics to Noise Ratio, Mel-Frequency Cepstral Coefficients are required for both identity recognition and emotion recognition using speech. Similary for facial features, extracted features are common for identity and emotional recognition tasks.
+9. Identity and emotion recognition tasks in each module can be performed parallely accross the modules as they are functionally independent.
+10. Establishment of identity using outputs from all modules and linking recognised emotion state is performed at the next level. This level cannot be processed until all the tasks in the previous level have concluded. Thus level-to-level flow has functional dependency.
