@@ -353,7 +353,6 @@ The database contains 213 images of 7 facial expressions (6 basic facial express
 [[../figures/dataFlowDiagram.png]]
 \newpage
 
-\newpage
 ** Use Case Diagram
 #+CAPTION: Use Case Diagram
 #+NAME: use-case-diagram
