@@ -48,7 +48,15 @@ To model the proposed systems using UML diagrams.
 #+NAME: fig:class-diagram
 [[../figures/classDiagram.png]]
 \newpage
-** State diagram
-#+CAPTION: State diagram
-#+NAME: fig:state-digram
-[[../figures/stateDiagram.png]]
+** Activity Diagram
+#+CAPTION: Activity Diagram
+#+NAME: fig: activity-digram
+#+ATTR_LATEX: 
+[[../figures/activityDiagram.png]]
+\newpage
+** Dataflow Diagram
+#+CAPTION: Dataflow Diagram
+#+NAME: fig: dataflow-diagram
+#+ATTR_LATEX: 
+[[../figures/dataFlowDiagram.png]]
+\newpage

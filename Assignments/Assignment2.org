@@ -48,7 +48,8 @@ These problems are the problems that are even harder than the NP-complete proble
 + Objective function for DNN \\
   Gradient descent - mini-batch
 + Objective function for DNN \\
-  Cross entropy                 
+  Cross entropy
++ ELM is trained with least squared error.
   
 ** Speech analysis
 #+CAPTION: Speech analysis : Mathematical Model - Multinomial Naive Bayesian Classifier
@@ -68,6 +69,14 @@ These problems are the problems that are even harder than the NP-complete proble
   This stage uses the likelihood or evidence calculated in training to classify a novel input.
   \begin{equation}
   P(c|d) \propto P(c) \prod_{1 \leq k \leq n_d} P(t_k|c)
+  \end{equation}
+  In text classification, the goal is to find the best class for the input text. The best class in Multinomial NB is the most likely or maximum posteriori (MAP) class /c_{map}/ 
+  \begin{equation}
+  c_{map} = arg max_{c \in C}P(c|d) = arg max_{c \in C} P(c) \prod_{1 \leq k \leq n_d} P(tk|c) 
+  \end{equation}
+  In the above equation, many conditional probabilites are multiplied, and with a large enough vocabulary, raw multiplication will almost definitely result in an underflow. It is therefore better to perform the computation by adding logarithms of probabilites instead of multiplying probabilites. The class with highest log probability score is still the most probable; log(xy) = log(x) + log(y) and the logarithmic function is monotonic. Hence, the maximization that is actually done in our implementation of the Multinomial NB classifier is as follows:
+  \begin{equation}
+  c_{map} = arg max _{c \in C} [log P(c) + \sum _{1 \leq k \leq n_d} log P(t_k|c)]
   \end{equation}
 ** Facial feature analysis
 #+CAPTION: Facial feature analysis : Mathematical Model - Convolutional Neural Network(CNN)
