@@ -473,6 +473,32 @@ Speech emotion recognition using DNN and ELM cite:han14_speec_emotion_recog_usin
    | Accuracy | 0.50 | 0.63 | 0.16 | 0.35 | 0.73 |
    |----------+------+------+------+------+------|
 
+
+\newpage
+*** Screenshots
+1. Training the DNN
+   \\ \\ \\
+   #+attr_latex: :width 3.0in :options angle=90
+   #+CAPTION: Training DNN
+   #+NAME: training-dnn
+   [[../figures/emoRecSpeechTRAIN-DNN.png]]
+   \newpage
+2. Training the ELM
+   \\ \\ \\ 
+   #+attr_latex: :width 3in :options angle=90
+   #+CAPTION: Training ELM
+   #+NAME: training-elm
+   [[../figures/emoRecSpeechTRAIN-ELM.png]]
+   \newpage
+3. Testing with samples
+   \\ \\ \\
+   #+attr_latex: :width 3in :options angle=90
+   #+CAPTION: Testing emotion recognition from speech tone
+   #+NAME: testing-tone
+   [[../figures/emoRecSpeechTEST.png]]
+\newpage
+
+
 ** Speech Text Analysis with Multinomial Naive Bayesian Classification
 
 1. Why choose Multinomial Naive Bayes?
