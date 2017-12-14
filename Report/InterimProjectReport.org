@@ -551,13 +551,20 @@ Speech emotion recognition using DNN and ELM cite:han14_speec_emotion_recog_usin
 \newpage
 
 
-* DONE Time-line analysis of the project
+* Time-line analysis of the project
 #+CAPTION: Time line analysis
 #+NAME: time-line-analysis
-|------+-------|
-| Time | Tasks |
-|------+-------|
-|      |       |
+#+attr_latex: :align |p{4cm}|p{8cm}|
+|--------------------------+---------------------------------------------------------------------------------------------------------------------------------------|
+| Time                     | Tasks                                                                                                                                 |
+|--------------------------+---------------------------------------------------------------------------------------------------------------------------------------|
+| 3-4 weeks (Month 1)      | Study of the commonly used machine learning frameworks and toolkits (PDNN, scikit-learn, tensorflow and pytorch)                      |
+| 3-4 weeks (Month 2)      | Requirements engineering. Survey and problem statement formulation. Understanding the use cases.                                      |
+| 5-6 weeks (Months 3,4)   | Testing different models. Comparison of classifier performance.                                                                       |
+| 8-10 weeks(Months 5,6,7) | Implementation of the selected models. Testing with the robot under real life scenarios. Fine tuning classifiers with homebrewed data |
+| 5-6 weeks (Months 7,8)   | Finding research avenues based on the project. Incorporating optimizations. Conferring with industry experts for improvement inputs   |
+|--------------------------+---------------------------------------------------------------------------------------------------------------------------------------|
+
 \newpage
 
 * Future scope
