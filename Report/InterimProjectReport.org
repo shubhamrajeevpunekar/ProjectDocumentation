@@ -215,8 +215,8 @@ Speech recognition APIs are processed by other sentiment analysis APIs listed ab
 + Objective function for DNN \\
   Gradient descent - mini-batch
 + Objective function for DNN \\
-  Cross entropy                 
-  
+  Cross entropy
++ ELM is trained with least square error.
 ** Speech analysis
 #+CAPTION: Speech analysis : Mathematical Model - Multinomial Naive Bayesian Classifier
 #+NAME: speech-analysis-multiNB
